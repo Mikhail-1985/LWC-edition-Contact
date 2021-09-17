@@ -1,0 +1,80 @@
+<template>
+    <lightning-layout>
+        <lightning-record-edit-form
+    object-api-name={objectApiName}
+    record-id={recordId}>
+    <!-- <lightning-accordion active-section-name="Contact Information">
+    
+            <lightning-accordion-section name="Contact Information" label="Contact Information"> -->
+                <div class="slds-section slds-is-open"><h2>
+                    <span>Какой-то текст</span>
+                </h2>
+                <lightning-layout multiple-rows="true">
+            <lightning-layout-item size="6" medium-device-size="6" small-device-size="12"
+            large-device-size="6" padding="around-medium"
+            flexibility="auto">
+            <lightning-input-field
+                field-name={fields.firstname}>
+            </lightning-input-field>
+            <lightning-input-field
+                field-name={fields.lastname}>
+            </lightning-input-field>
+            </lightning-layout-item>
+            <lightning-layout-item size="6" medium-device-size="6" small-device-size="12"
+            large-device-size="6" padding="around-medium"
+            flexibility="auto">
+            <lightning-input-field
+                field-name={mobilePhone}>
+            </lightning-input-field>
+            <lightning-input-field
+                field-name={buisnessPhone}>
+            </lightning-input-field>
+            <lightning-input-field
+                required
+                field-name={email}>
+            </lightning-input-field>
+        </lightning-layout-item>
+    </lightning-layout>
+</div>
+        <!-- </lightning-accordion-section>
+    
+    <lightning-accordion-section name="Adress Information" label="Adress Information"> -->
+        <lightning-layout multiple-rows="true">
+        <lightning-input-field
+            field-name={fields.adress}>
+        </lightning-input-field>
+        <!-- <lightning-input-field
+            field-name={mailingCity}>
+        </lightning-input-field>
+        <lightning-input-field
+            field-name={mailingPostalCode}>
+        </lightning-input-field>
+        <lightning-input-field
+            field-name={mailingState}>
+        </lightning-input-field>
+        <lightning-input-field
+            field-name={mailingCountry}>
+        </lightning-input-field> -->
+    </lightning-layout>
+    <!-- </lightning-accordion-section>
+</lightning-accordion> -->
+<lightning-layout>
+    <lightning-layout-item alignment-bump="left">
+            <lightning-button
+                variant="success"
+                type="submit"
+                label="Save"
+                onclick={showToast}>
+            </lightning-button>
+            <lightning-button
+            variant="destructive-text"
+            label="Cancel"
+            title="Cancel"
+            onclick={handleReset}
+            >
+            </lightning-button>
+        </lightning-layout-item>
+        </lightning-layout>
+</lightning-record-edit-form> 
+    </lightning-layout>
+</template>
